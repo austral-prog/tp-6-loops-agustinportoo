@@ -31,3 +31,18 @@ def sum_evens(n):
             if i%2==0:
                 suma+=i
         return suma
+
+def factorial(n):
+    """
+    Retorna el factorial de n (n!).
+    Si n <= 0, retorna 1.
+
+    Ejemplo: factorial(5) -> 120  (1*2*3*4*5)
+    """
+    if n<=0:
+        return 1
+    else:
+        fac=1
+        for i in range(1,n+1):
+            fac*=i
+        return fac

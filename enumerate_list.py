@@ -9,8 +9,13 @@ def enumerate_list(lst):
 
     Ejemplo: enumerate_list(["Red", "Green", "", "White"]) -> ["0. Red", "1. Green", "2. White"]
     """
-    return "ANSWER HERE"  # Remove this line and implement
-
+    resultado=[]
+    contador=0
+    for indice,valor in enumerate(lst):
+        if valor!="":
+            resultado.append(f"{contador}. {valor}")
+            contador+=1
+    return resultado
 
 def enumerate_backwards(lst):
     """
@@ -19,4 +24,10 @@ def enumerate_backwards(lst):
 
     Ejemplo: enumerate_backwards(["Red", "Green", ""]) -> ["0. deR", "1. neerG"]
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    resultado=[]
+    contador = 0
+    for indice,valor in enumerate(lst):
+        if valor!="":
+            resultado.append(f"{contador}. {valor[::-1]}")
+            contador+=1
+    return resultado
